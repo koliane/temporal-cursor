@@ -1,0 +1,18 @@
+{
+  "name": "demo/temporal-php-rr",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "temporal/sdk": "^2.13",
+    "spiral/roadrunner-worker": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "scripts": {
+    "worker": "rr serve -c .rr.yaml",
+    "client": "php client.php"
+  }
+}

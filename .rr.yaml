@@ -1,0 +1,17 @@
+version: "3"
+
+rpc:
+  listen: tcp://0.0.0.0:6001
+
+server:
+  command: "php worker.php"
+  relay: pipes
+
+temporal:
+  address: temporal:7233
+  activities:
+    num_workers: 10
+
+logs:
+  mode: development
+  level: debug
