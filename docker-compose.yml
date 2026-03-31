@@ -37,6 +37,15 @@ services:
     ports:
       - "8080:8080"
 
+  admin-tools:
+    image: temporalio/admin-tools:latest
+    depends_on:
+      - temporal
+    environment:
+      TEMPORAL_ADDRESS: temporal:7233
+    stdin_open: true
+    tty: true
+
   worker:
     build:
       context: .

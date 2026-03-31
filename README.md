@@ -2,6 +2,7 @@
 
 Простейший пример:
 - `Temporal Server` и `Temporal UI` через `docker-compose`
+- `Temporal admin-tools` для CLI-команд
 - PHP worker на `RoadRunner`
 - один `Workflow` + одна `Activity`
 
@@ -29,6 +30,14 @@ Workflow result: Hello, Cursor from Temporal activity!
 
 - Temporal UI: http://localhost:8080
 - Temporal gRPC: `localhost:7233`
+
+## Пример admin-tools
+
+Список workflow через Temporal CLI:
+
+```bash
+docker compose exec admin-tools temporal workflow list --address temporal:7233
+```
 
 ## Остановка
 
